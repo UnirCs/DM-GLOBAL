@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Selección de Películas - Cine XYZ</title>
+        <style>
+            /* Estilos comunes */
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+            header, footer {
+                text-align: center;
+                padding: 10px;
+            }
+            .pelicula {
+                border: 1px solid #ccc;
+                padding: 10px;
+                margin: 10px 0;
+            }
+            button {
+                padding: 5px 10px;
+                background-color: #4285f4;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+            /* Temas */
+            /* Tema default: estilo original */
+            .default-theme {
+                background-color: white;
+                color: black;
+            }
+            /* Tema pink: colores pastel rosa */
+            .pink-theme {
+                background-color: #ffe6f2;
+                color: #a64d79;
+            }
+            .pink-theme header, .pink-theme footer {
+                background-color: #ffb6c1;
+                color: #800040;
+            }
+            .pink-theme button {
+                background-color: #ff66a3;
+            }
+            /* Tema aqua: colores azul claro y aguamarina */
+            .aqua-theme {
+                background-color: #e0ffff;
+                color: #007777;
+            }
+            .aqua-theme header, .aqua-theme footer {
+                background-color: #afeeee;
+                color: #005757;
+            }
+            .aqua-theme button {
+                background-color: #40e0d0;
+            }
+            /* Estilo para el selector de temas */
+            .theme-selector {
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+    <body class="default-theme">
+        <header>
+            <h1 id="titulo">Cine XYZ: Selección de Películas</h1>
+            <div class="theme-selector">
+                <label for="themeSelector">Selecciona el tema:</label>
+                <select id="themeSelector">
+                    <option value="default-theme">Default</option>
+                    <option value="pink-theme">Pink</option>
+                    <option value="aqua-theme">Aqua</option>
+                </select>
+            </div>
+        </header>
+        <section id="peliculas">
+            <article class="pelicula" data-id="1">
+                <h2>La Gran Aventura</h2>
+                <p>Duración: 120 minutos. Género: Aventura.</p>
+                <button class="btnSeleccionar" id="btn1">Seleccionar</button>
+            </article>
+            <article class="pelicula" data-id="2">
+                <h2>Romance en París</h2>
+                <p>Duración: 95 minutos. Género: Romance.</p>
+                <button class="btnSeleccionar" id="btn2">Seleccionar</button>
+            </article>
+            <article class="pelicula" data-id="3">
+                <h2>Misterio en la Noche</h2>
+                <p>Duración: 110 minutos. Género: Suspenso.</p>
+                <button class="btnSeleccionar" id="btn3">Seleccionar</button>
+            </article>
+        </section>
+        <footer>
+            <p>&copy; 2025 Cine XYZ. Todos los derechos reservados.</p>
+        </footer>
+        <script>
+            // Obtenemos el selector de temas
+            const themeSelector = document.getElementById('themeSelector');
+
+            // Al cambiar la opción, se actualiza la clase del body para aplicar el tema correspondiente
+            themeSelector.addEventListener('change', function() {
+                // Se eliminan todas las clases de tema posibles
+                document.body.classList.remove('default-theme', 'pink-theme', 'aqua-theme');
+                // Se añade la clase del tema seleccionado
+                document.body.classList.add(this.value);
+            });
+        </script>
+    </body>
+</html>

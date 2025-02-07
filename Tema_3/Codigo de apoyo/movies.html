@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Selección de Películas - Cine XYZ</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+            }
+            header, footer {
+                text-align: center;
+            }
+            .pelicula {
+                border: 1px solid #ccc;
+                padding: 10px;
+                margin: 10px 0;
+            }
+            button {
+                padding: 5px 10px;
+                background-color: #4285f4;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 id="titulo">Cine XYZ: Selección de Películas</h1>
+        </header>
+        <section id="peliculas">
+            <article class="pelicula" data-id="1">
+                <h2>La Gran Aventura</h2>
+                <p>Duración: 120 minutos. Género: Aventura.</p>
+                <button class="btnSeleccionar" id="btn1">Seleccionar</button>
+            </article>
+            <article class="pelicula" data-id="2">
+                <h2>Romance en París</h2>
+                <p>Duración: 95 minutos. Género: Romance.</p>
+                <button class="btnSeleccionar" id="btn2">Seleccionar</button>
+            </article>
+            <article class="pelicula" data-id="3">
+                <h2>Misterio en la Noche</h2>
+                <p>Duración: 110 minutos. Género: Suspenso.</p>
+                <button class="btnSeleccionar" id="btn3">Seleccionar</button>
+            </article>
+        </section>
+        <footer>
+            <p>&copy; 2025 Cine XYZ. Todos los derechos reservados.</p>
+        </footer>
+    </body>
+</html>

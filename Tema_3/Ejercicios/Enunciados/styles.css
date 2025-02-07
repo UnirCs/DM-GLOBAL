@@ -1,0 +1,68 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+#movies {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.movie {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.movie h2 {
+    margin-top: 0;
+}
+
+.movie p {
+    margin: 5px 0;
+}
+
+.sessions {
+    margin-top: 10px;
+}
+
+.session-btn {
+    background-color: #4285f4;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    margin-right: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.session-btn:hover {
+    background-color: #357ae8;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
