@@ -1,8 +1,9 @@
 import React from 'react';
+import './Footer.css';
 
 const Footer = () => {
     return (
-        <footer>
+        <footer className="footer">
             <p>&copy; 2025 Cine Entradas. Todos los derechos reservados.</p>
         </footer>
     );

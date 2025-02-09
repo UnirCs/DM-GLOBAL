@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import Pelicula from './Pelicula';
 import useMovies from '../hooks/useMovies';
 import SessionLanguageSelector from './SessionLanguageSelector';
+import './Landing.css';
 
 const Landing = () => {
     const { cinema } = useParams();

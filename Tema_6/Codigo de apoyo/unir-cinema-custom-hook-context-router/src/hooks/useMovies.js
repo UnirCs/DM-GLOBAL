@@ -13,7 +13,7 @@ const useMovies = (city) => {
         const fetchMovies = async () => {
             setLoading(true);
             try {
-                // Simulación de retardo de 2 segundos
+                // Simulación de retardo
                 await new Promise(resolve => setTimeout(resolve, 2000));
                 const response = await axios.get(`https://unir-cinema.net/movies?cinema=${city}`);
                 setMovies(response.data);

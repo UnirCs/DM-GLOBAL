@@ -4,7 +4,7 @@ export const GlobalContext = createContext();
 
 export const GlobalProvider = ({ children }) => {
   const [darkMode, setDarkMode] = useState(false);
-  const [sessionLanguage, setSessionLanguage] = useState("todos"); // Valores: "todos", "castellano", "vose"
+  const [sessionLanguage, setSessionLanguage] = useState("todos");
 
   const toggleDarkMode = () => {
     setDarkMode(prev => !prev);
