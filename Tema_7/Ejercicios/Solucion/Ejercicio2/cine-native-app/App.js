@@ -1,7 +1,8 @@
 import {StatusBar} from 'expo-status-bar';
-import {Text, View} from 'react-native';
+import {SafeAreaView, Text, View} from 'react-native';
 import "./global.css";
 import {useFonts} from "expo-font";
+import CinemaButton from "./components/CinemaButton";
 
 export default function App() {
 
@@ -12,11 +13,30 @@ export default function App() {
     if (!fontsLoaded && !error) return null;
 
     return (
-        <View className="bg-blue-500 text-white flex-1 items-center justify-center">
-            <Text className="font-rasa-light">Jesus</Text>
-            <Text>Perez</Text>
-            <Text>Melero</Text>
+        <SafeAreaView>
             <StatusBar style="auto"/>
-        </View>
+            <View className="px-10 mt-5 bg-white-500 text-white">
+
+                <Text className="text-center font-rasa-light text-4xl mb-10">UNIR Cinema</Text>
+                <Text className="text-center font-rasa-light text-2xl mb-10">¿A qué cine deseas ir?</Text>
+
+                <CinemaButton onPress={() => console.log("Cine de Madrid")}
+                              onLongPress={() => console.log("Cine de Madrid - LongPress")}>
+                    Madrid
+                </CinemaButton>
+                <CinemaButton onPress={() => console.log("Cine de Barcelona")}
+                              onLongPress={() => console.log("Cine de Barcelona - LongPress")}>
+                    Barcelona
+                </CinemaButton>
+                <CinemaButton onPress={() => console.log("Cine de Valencia")}
+                              onLongPress={() => console.log("Cine de Valencia - LongPress")}>
+                    Valencia
+                </CinemaButton>
+                <CinemaButton onPress={() => console.log("Cine de Sevilla")}
+                              onLongPress={() => console.log("Cine de Sevilla - LongPress")}>
+                    Sevilla
+                </CinemaButton>
+            </View>
+        </SafeAreaView>
     );
 }
