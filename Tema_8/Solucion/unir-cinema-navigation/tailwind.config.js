@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       colors: {
         unirLogoBg: '#0096c3',
+        unirButtonBg: '#427787',
         secondary: {
           DEFAULT: '#B40086',
           100: '#C51297',

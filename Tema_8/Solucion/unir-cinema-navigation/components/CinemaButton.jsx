@@ -1,7 +1,7 @@
 import React from 'react';
 import {Pressable, Text} from "react-native";
 
-const CinemaButton = ({color="bg-blue-500", onPress, onLongPress, children}) => {
+const CinemaButton = ({color="bg-unirButtonBg", onPress, onLongPress, children}) => {
 
     return (
         <Pressable

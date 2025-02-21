@@ -1,7 +1,8 @@
 import './../global.css';
 import { Slot, SplashScreen } from 'expo-router';
 import {useFonts} from "expo-font";
-import {useEffect} from "react";
+import React, {useEffect} from "react";
+import {Image, View} from "react-native";
 
 // Ocultamos el SplashScreen hasta que las fuentes estén cargadas
 SplashScreen.preventAutoHideAsync();
@@ -23,7 +24,9 @@ const RootLayout = () => {
 
     if (!fontsLoaded && !error) return null;
 
-    return <Slot />;
+    return (
+        <Slot/>
+    );
     // return <Stack />;
 };
 export default RootLayout;

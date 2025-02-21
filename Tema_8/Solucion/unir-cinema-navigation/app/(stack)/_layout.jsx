@@ -8,7 +8,7 @@ const StackLayout = () => {
                 headerShadowVisible: false,
 
                 headerStyle: {
-                    backgroundColor: "#f4511e",
+                    backgroundColor: "#0096c3",
                 },
                 headerTintColor: "#fff",
                 headerTitleStyle: {
@@ -20,8 +20,18 @@ const StackLayout = () => {
                 title: "Inicio"
             }}>
             </Stack.Screen>
-            <Stack.Screen name="landing/[id]" options={({ route }) => ({
+            <Stack.Screen name="landing/[id]/index" options={({ route }) => ({
                 title: `${route.params.id}`,
+                //animation: "fade_from_bottom"
+            })}>
+            </Stack.Screen>
+            <Stack.Screen name="landing/[id]/movies/[idMovie]/index" options={({ route }) => ({
+                title: `${route.params.idMovie}`,
+                //animation: "fade_from_bottom"
+            })}>
+            </Stack.Screen>
+            <Stack.Screen name="landing/[id]/movies/[idMovie]/booking/index" options={({ route }) => ({
+                title: `Selecciona tus asientos`,
                 //animation: "fade_from_bottom"
             })}>
             </Stack.Screen>
