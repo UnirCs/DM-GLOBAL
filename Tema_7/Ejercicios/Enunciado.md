@@ -64,23 +64,3 @@ El objetivo de este ejercicio es configurar un nuevo proyecto de React Native co
        ```
 
 6. **Verificar**: Verifica que los estilos de Nativewind se han aplicado correctamente y que la fuente descargada se muestra en el simulador. ¡Y juega todo lo que quieras 🤗🤗!
-
-
-### Ejercicio 2: Creación de componentes básicos en React Native
-
-El objetivo de este ejercicio un componente funcional básico en React Native y aplicar estilos a través de Nativewind.
-
-#### Pasos a seguir
-
-Partimos de la solución del ejercicio anterior, en la que hemos configurado un proyecto de React Native con Expo y hemos aplicado estilos sencillos a través de Nativewind.
-Lo siguiente que haremos para construir la versión de app móvil de nuestro proyecto de cine es crear algo parecido a la ventana de selección de cine que se muestra en la versión web. Para ello necesitaremos disponer de algo "parecido" a un botón que contenga texto. Para ello lo que haremos será crear una carpeta `components` en la raíz de nuestro proyecto y dentro de ella un archivo `CinemaButton.js`.
-
-Se recomienda revisar la siguiente documentación para la creación de este botón:
-- Pressable: https://reactnative.dev/docs/pressable
-- SafeAreaView: https://reactnative.dev/docs/safeareaview
-- Border radius de Tailwind: https://tailwindcss.com/docs/border-radius
-
-El look and feel del botón puede ser el que desees, tienes libertad total. Cuando se presione el botón debe mostrarse con un console.log la ciudad elegida únicamente.
-
-Una vez que nuestro botón esté creado, vamos a insertar 4 de ellos en nuestra, por ahora, pantalla principal `App.js`. Serán los botones para accceder en un futuro a los cines de Madrid, Barcelona, Valencia y Sevilla.
-¿Los estilos no se visualizan correctamente? Revisa el archivo `tailwind.config.js` e incluye la carpeta `components` que hemos creado: `"./components/**/*.{js,jsx,ts,tsx}"`.

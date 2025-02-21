@@ -7,5 +7,7 @@
 /dataSources/
 /dataSources.local.xml
 /.idea/workspace.xml
-/Tema_2/Codigo de apoyo/package-lock.json
-/Tema_2/Codigo de apoyo/node_modules/
+
+**/node_modules/
+**/package-lock.json
+**/nativewind-env.d.ts

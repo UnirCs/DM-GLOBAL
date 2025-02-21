@@ -1,4 +1,4 @@
-import './../global.css';
+import '../global.css';
 import { Slot, SplashScreen } from 'expo-router';
 import {useFonts} from "expo-font";
 import React, {useEffect} from "react";
