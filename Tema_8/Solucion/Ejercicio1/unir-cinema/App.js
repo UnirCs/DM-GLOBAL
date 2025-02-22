@@ -3,6 +3,7 @@ import {SafeAreaView, Text, View} from 'react-native';
 import "./global.css";
 import {useFonts} from "expo-font";
 import CinemaButton from "./components/CinemaButton";
+import * as Haptics from "expo-haptics";
 
 export default function App() {
 
@@ -20,19 +21,31 @@ export default function App() {
                 <Text className="text-center font-rasa-light text-4xl mb-10">UNIR Cinema</Text>
                 <Text className="text-center font-rasa-light text-2xl mb-10">¿A qué cine deseas ir?</Text>
 
-                <CinemaButton onPress={() => console.log("Cine de Madrid")}
+                <CinemaButton onPress={() => {
+                    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+                    console.log("Cine de Madrid");}
+                }
                               onLongPress={() => console.log("Cine de Madrid - LongPress")}>
                     Madrid
                 </CinemaButton>
-                <CinemaButton onPress={() => console.log("Cine de Barcelona")}
+                <CinemaButton onPress={() => {
+                    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+                    console.log("Cine de Barcelona");}
+                }
                               onLongPress={() => console.log("Cine de Barcelona - LongPress")}>
                     Barcelona
                 </CinemaButton>
-                <CinemaButton onPress={() => console.log("Cine de Valencia")}
+                <CinemaButton onPress={() => {
+                    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+                    console.log("Cine de Valencia");}
+                }
                               onLongPress={() => console.log("Cine de Valencia - LongPress")}>
                     Valencia
                 </CinemaButton>
-                <CinemaButton onPress={() => console.log("Cine de Sevilla")}
+                <CinemaButton onPress={() => {
+                    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+                    console.log("Cine de Sevilla");}
+                }
                               onLongPress={() => console.log("Cine de Sevilla - LongPress")}>
                     Sevilla
                 </CinemaButton>
