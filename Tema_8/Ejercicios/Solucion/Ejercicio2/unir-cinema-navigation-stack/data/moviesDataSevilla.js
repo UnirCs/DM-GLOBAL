@@ -6,9 +6,9 @@ export const movies = [
         actors: "Nicolas Cage, John Cusack, John Malkovich",
         categories: "Acción, Crimen",
         sessions: [
-            { hour: "12:00", language: Math.random() < 0.5 ? "castellano" : "vose" },
-            { hour: "15:00", language: Math.random() < 0.5 ? "castellano" : "vose" },
-            { hour: "18:00", language: Math.random() < 0.5 ? "castellano" : "vose" }
+            {id: 1, hour: "12:00", language: Math.random() < 0.5 ? "castellano" : "vose"},
+            {id: 2, hour: "15:00", language: Math.random() < 0.5 ? "castellano" : "vose"},
+            {id: 3, hour: "18:00", language: Math.random() < 0.5 ? "castellano" : "vose"}
         ]
     },
     {
@@ -18,9 +18,9 @@ export const movies = [
         actors: "Sean Connery, Nicolas Cage, Ed Harris",
         categories: "Acción, Suspense",
         sessions: [
-            { hour: "13:00", language: Math.random() < 0.5 ? "castellano" : "vose" },
-            { hour: "16:00", language: Math.random() < 0.5 ? "castellano" : "vose" },
-            { hour: "19:00", language: Math.random() < 0.5 ? "castellano" : "vose" }
+            {id: 1, hour: "13:00", language: Math.random() < 0.5 ? "castellano" : "vose"},
+            {id: 2, hour: "16:00", language: Math.random() < 0.5 ? "castellano" : "vose"},
+            {id: 3, hour: "19:00", language: Math.random() < 0.5 ? "castellano" : "vose"}
         ]
     },
     {
@@ -30,9 +30,9 @@ export const movies = [
         actors: "Denzel Washington, Ethan Hawke",
         categories: "Crimen, Drama",
         sessions: [
-            { hour: "14:00", language: Math.random() < 0.5 ? "castellano" : "vose" },
-            { hour: "17:00", language: Math.random() < 0.5 ? "castellano" : "vose" },
-            { hour: "20:00", language: Math.random() < 0.5 ? "castellano" : "vose" }
+            {id: 1, hour: "14:00", language: Math.random() < 0.5 ? "castellano" : "vose"},
+            {id: 2, hour: "17:00", language: Math.random() < 0.5 ? "castellano" : "vose"},
+            {id: 3, hour: "20:00", language: Math.random() < 0.5 ? "castellano" : "vose"}
         ]
     },
     {
@@ -42,9 +42,9 @@ export const movies = [
         actors: "Brad Pitt, Benicio del Toro, Jason Statham",
         categories: "Crimen, Comedia",
         sessions: [
-            { hour: "12:30", language: Math.random() < 0.5 ? "castellano" : "vose" },
-            { hour: "15:30", language: Math.random() < 0.5 ? "castellano" : "vose" },
-            { hour: "18:30", language: Math.random() < 0.5 ? "castellano" : "vose" }
+            {id: 1, hour: "12:30", language: Math.random() < 0.5 ? "castellano" : "vose"},
+            {id: 2, hour: "15:30", language: Math.random() < 0.5 ? "castellano" : "vose"},
+            {id: 3, hour: "18:30", language: Math.random() < 0.5 ? "castellano" : "vose"}
         ]
     },
     {
@@ -54,9 +54,9 @@ export const movies = [
         actors: "Jason Flemyng, Dexter Fletcher, Nick Moran",
         categories: "Crimen, Comedia",
         sessions: [
-            { hour: "13:30", language: Math.random() < 0.5 ? "castellano" : "vose" },
-            { hour: "16:30", language: Math.random() < 0.5 ? "castellano" : "vose" },
-            { hour: "19:30", language: Math.random() < 0.5 ? "castellano" : "vose" }
+            {id: 1, hour: "13:30", language: Math.random() < 0.5 ? "castellano" : "vose"},
+            {id: 2, hour: "16:30", language: Math.random() < 0.5 ? "castellano" : "vose"},
+            {id: 3, hour: "19:30", language: Math.random() < 0.5 ? "castellano" : "vose"}
         ]
     }
 ];

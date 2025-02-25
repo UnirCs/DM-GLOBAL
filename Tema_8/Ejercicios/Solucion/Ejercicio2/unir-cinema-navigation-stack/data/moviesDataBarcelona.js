@@ -6,9 +6,9 @@ export const movies = [
         actors: "Ryan Gosling, Emma Stone",
         categories: "Musical, Romance",
         sessions: [
-            { hour: "13:00", language: Math.random() < 0.5 ? "castellano" : "vose" },
-            { hour: "16:00", language: Math.random() < 0.5 ? "castellano" : "vose" },
-            { hour: "19:00", language: Math.random() < 0.5 ? "castellano" : "vose" }
+            {id: 1, hour: "13:00", language: Math.random() < 0.5 ? "castellano" : "vose"},
+            {id: 2, hour: "16:00", language: Math.random() < 0.5 ? "castellano" : "vose"},
+            {id: 3, hour: "19:00", language: Math.random() < 0.5 ? "castellano" : "vose"}
         ]
     },
     {
@@ -18,9 +18,9 @@ export const movies = [
         actors: "Sam Worthington, Zoe Saldana",
         categories: "Acción, Ciencia Ficción",
         sessions: [
-            { hour: "14:00", language: Math.random() < 0.5 ? "castellano" : "vose" },
-            { hour: "18:00", language: Math.random() < 0.5 ? "castellano" : "vose" },
-            { hour: "22:00", language: Math.random() < 0.5 ? "castellano" : "vose" }
+            {id: 1, hour: "14:00", language: Math.random() < 0.5 ? "castellano" : "vose"},
+            {id: 2, hour: "18:00", language: Math.random() < 0.5 ? "castellano" : "vose"},
+            {id: 3, hour: "22:00", language: Math.random() < 0.5 ? "castellano" : "vose"}
         ]
     },
     {
@@ -30,9 +30,9 @@ export const movies = [
         actors: "Marlon Brando, Al Pacino",
         categories: "Crimen, Drama",
         sessions: [
-            { hour: "15:00", language: Math.random() < 0.5 ? "castellano" : "vose" },
-            { hour: "19:00", language: Math.random() < 0.5 ? "castellano" : "vose" },
-            { hour: "23:00", language: Math.random() < 0.5 ? "castellano" : "vose" }
+            {id: 1, hour: "15:00", language: Math.random() < 0.5 ? "castellano" : "vose"},
+            {id: 2, hour: "19:00", language: Math.random() < 0.5 ? "castellano" : "vose"},
+            {id: 3, hour: "23:00", language: Math.random() < 0.5 ? "castellano" : "vose"}
         ]
     },
     {
@@ -42,9 +42,9 @@ export const movies = [
         actors: "John Travolta, Uma Thurman, Samuel L. Jackson",
         categories: "Crimen, Drama",
         sessions: [
-            { hour: "12:00", language: Math.random() < 0.5 ? "castellano" : "vose" },
-            { hour: "15:00", language: Math.random() < 0.5 ? "castellano" : "vose" },
-            { hour: "18:00", language: Math.random() < 0.5 ? "castellano" : "vose" }
+            {id: 1, hour: "12:00", language: Math.random() < 0.5 ? "castellano" : "vose"},
+            {id: 2, hour: "15:00", language: Math.random() < 0.5 ? "castellano" : "vose"},
+            {id: 3, hour: "18:00", language: Math.random() < 0.5 ? "castellano" : "vose"}
         ]
     },
     {
@@ -54,9 +54,9 @@ export const movies = [
         actors: "Audrey Tautou, Mathieu Kassovitz",
         categories: "Comedia, Romance",
         sessions: [
-            { hour: "11:00", language: Math.random() < 0.5 ? "castellano" : "vose" },
-            { hour: "14:00", language: Math.random() < 0.5 ? "castellano" : "vose" },
-            { hour: "17:00", language: Math.random() < 0.5 ? "castellano" : "vose" }
+            {id: 1, hour: "11:00", language: Math.random() < 0.5 ? "castellano" : "vose"},
+            {id: 2, hour: "14:00", language: Math.random() < 0.5 ? "castellano" : "vose"},
+            {id: 3, hour: "17:00", language: Math.random() < 0.5 ? "castellano" : "vose"}
         ]
     }
 ];

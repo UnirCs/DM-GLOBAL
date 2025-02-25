@@ -30,7 +30,7 @@ const StackLayout = () => {
                 //animation: "fade_from_bottom"
             })}>
             </Stack.Screen>
-            <Stack.Screen name="landing/[id]/movies/[idMovie]/booking/index" options={({ route }) => ({
+            <Stack.Screen name="landing/[id]/movies/[idMovie]/booking/[idSession]/index" options={({ route }) => ({
                 title: `Selecciona tus asientos`,
                 //animation: "fade_from_bottom"
             })}>

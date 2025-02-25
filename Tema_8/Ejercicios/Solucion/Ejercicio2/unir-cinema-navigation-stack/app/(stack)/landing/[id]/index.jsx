@@ -29,7 +29,7 @@ const CinemaLanding = () => {
                                             key={session.hour}
                                             session={session.hour}
                                             language={session.language}
-                                            onPress={() => router.push(`/(stack)/landing/${id}/movies/${item.id}/booking`)}/>
+                                            onPress={() => router.push(`/(stack)/landing/${id}/movies/${item.id}/booking/${session.id}`)}/>
                                     ))
                                 }
                             </View>
