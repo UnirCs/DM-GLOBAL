@@ -46,3 +46,11 @@ Una vez que el proyecto esté creado, realizaremos los siguientes ajustes:
  - `MovieDetail`: Será la pantalla donde veremos los detalles de una película en concreto.
  - `Booking`: Será la pantalla donde se realizará la reserva de una película.
 - Sírvete del código de apoyo, ya que para el ejercicio solo tendrás que implementar la navegación a `MovieDetail` y `Booking`.
+
+Se recomienda revisar la siguiente documentación:
+- Expo Router: https://docs.expo.dev/router/installation/
+- Expo Router Stack: https://docs.expo.dev/router/advanced/stack/
+- ScrollView: https://reactnative.dev/docs/scrollview
+- FlatList: https://reactnative.dev/docs/flatlist
+- TouchableOpacity (como alternativa a Pressable que ya conocemos, aunque Pressable es mejor): https://reactnative.dev/docs/touchableopacity
+

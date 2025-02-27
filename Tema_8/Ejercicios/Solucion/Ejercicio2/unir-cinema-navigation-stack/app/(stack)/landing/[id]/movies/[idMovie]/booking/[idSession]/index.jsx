@@ -39,9 +39,6 @@ const SeatSelection = () => {
         }
         return occupiedSeats;
     }
-
-    console.log(idSession);
-    console.log(movie);
     return loading ? <Text className="text-center">Cargando...</Text> : (
         <ScrollView className="flex-1 px-5 mt-5">
             {movie ? (
