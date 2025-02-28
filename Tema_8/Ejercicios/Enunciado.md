@@ -54,3 +54,21 @@ Se recomienda revisar la siguiente documentación:
 - FlatList: https://reactnative.dev/docs/flatlist
 - TouchableOpacity (como alternativa a Pressable que ya conocemos, aunque Pressable es mejor): https://reactnative.dev/docs/touchableopacity
 
+### Ejercicio 3: Customizar tabs de navegación
+
+Basándonos en el código de apoyo donde puedes observar de qué forma se ha implementado parte de la navegación con tabs, vamos a implementar algo de funcionalidad en ellos.
+Tenemos un tab de Entradas donde deberíamos ver las entradas que hemos comprado. El objetivo principal del ejercicio es que utilicemos un contexto para poder compartir información entre los distintos tabs. En este caso, la información que queremos compartir es la lista de entradas que hemos comprado.
+
+Para realizar este ejercicio, deberás seguir los siguientes pasos:
+
+- Crear un contexto en un directorio `context` que se llame `PurchaseContext.jsx`. Este contexto deberá tener un estado que contenga un array de objetos con la información de las entradas compradas, y quizá algún método que permita añadir entradas a dicha estructura.
+- Modificar el componente que se renderiza en la pantalla de booking para que, al momento de hacer la compra, se añadan las entradas a la lista de entradas compradas. Para ello, deberás utilizar el contexto que has creado. Para darle algo más de feedback visual, incluiremos una alerta al momento de comprar que nos indique que la compra se ha realizado con éxito.
+- Modificar el componente que se renderiza en la pantalla de entradas para que muestre la lista de entradas compradas. Para ello, deberás utilizar el contexto que has creado.
+
+Se recomienda revisar la siguiente documentación:
+- Tab Navigation: https://docs.expo.dev/router/advanced/tabs/
+- useContext: https://react.dev/reference/react/useContext
+- Alert: https://reactnative.dev/docs/alert
+- FlatList: https://reactnative.dev/docs/flatlist
+- ScrollView: https://reactnative.dev/docs/scrollview
+- FontAwesome Icons: https://fontawesome.com/v4/icons/
