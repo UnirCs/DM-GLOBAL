@@ -85,7 +85,7 @@ const SeatSelection = () => {
                             <Text className="text-lg">Hora: {movie.sessions[idSession - 1].hour}</Text>
                         </View>
                         <View className="mb-4">
-                            <Text className="text-center mb-5 py-7 bg-gray-800 text-white p-2 rounded">Pantalla</Text>
+                            <Text className="text-center mb-5 py-7 bg-gray-800 text-white rounded">Pantalla</Text>
                             <View className="flex flex-wrap justify-center">
                                 {seats.map((row, i) => (
                                     <View key={i} className="flex flex-row">
