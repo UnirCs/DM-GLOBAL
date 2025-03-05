@@ -1,9 +1,10 @@
 import React, { useContext, useState } from 'react';
-import { Text, View, ScrollView, SafeAreaView, Pressable, Modal, TouchableOpacity } from 'react-native';
+import { Text, View, ScrollView, SafeAreaView, Pressable, Modal, TouchableOpacity, Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { PurchaseContext } from '../../../../../../context/PurchaseContext';
 import { router } from 'expo-router';
 import QRCode from 'react-native-qrcode-svg';
+import * as Calendar from 'expo-calendar';
 
 const TicketsTab = () => {
     const { purchases } = useContext(PurchaseContext);
@@ -20,6 +21,38 @@ const TicketsTab = () => {
         setQrCodeValue(randomValue);
         setSelectedPurchase(purchase);
         setModalVisible(true);
+    };
+
+    const handleCreateCalendarEvent = async (purchase) => {
+        const { status } = await Calendar.requestCalendarPermissionsAsync();
+        if (status === 'granted') {
+            const calendars = await Calendar.getCalendarsAsync(Calendar.EntityTypes.EVENT);
+            const defaultCalendar = calendars.find(cal => cal.isPrimary) || calendars[0];
+
+            const [hour, minute] = purchase.hour.split(':').map(Number);
+            const startDate = new Date();
+            startDate.setHours(hour, minute, 0, 0);
+            const endDate = new Date(startDate.getTime() + 2 * 60 * 60 * 1000); // 2 hours later
+
+            const eventDetails = {
+                title: `Movie: ${purchase.movie}`,
+                startDate,
+                endDate,
+                timeZone: 'GMT',
+                location: purchase.cinema,
+                notes: `Asientos: ${purchase.seats?.map(seat => `Row ${seat.row} - Seat ${seat.col}`).join(', ')}`
+            };
+
+            try {
+                await Calendar.createEventAsync(defaultCalendar.id, eventDetails);
+                Alert.alert('Event Created', 'The event has been added to your calendar.');
+            } catch (error) {
+                console.error('Error creating calendar event:', error);
+                Alert.alert('Error', 'There was an error creating the calendar event.');
+            }
+        } else {
+            Alert.alert('Permission Denied', 'Calendar permission is required to create an event.');
+        }
     };
 
     return (
@@ -39,6 +72,9 @@ const TicketsTab = () => {
                                 ))}
                             </View>
                             <View className="absolute bottom-0 right-0 p-2 flex-row">
+                                <Pressable onPress={() => handleCreateCalendarEvent(purchase)} className="mx-2">
+                                    <Ionicons name="calendar-number-outline" size={30} color="#0096c3"/>
+                                </Pressable>
                                 <Pressable onPress={() => handleQRCode(purchase)} className="mx-2">
                                     <Ionicons name="qr-code-outline" size={30} color="#0096c3"/>
                                 </Pressable>
