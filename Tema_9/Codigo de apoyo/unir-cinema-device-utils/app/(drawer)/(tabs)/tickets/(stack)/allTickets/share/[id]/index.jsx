@@ -47,7 +47,7 @@ const ShareTicketsScreen = () => {
             if (isAvailable) {
                 await SMS.sendSMSAsync(
                     [contact.phoneNumbers[0].number],
-                    `Aqui estan los tickets para que vayamos a ver juntos ${purchase.movie}`,
+                    `¡Recuerda que nos vemos a las ${purchase.hour} para ver ${purchase.movie}!`,
                 );
                 console.log("SMS sent");
             } else {
