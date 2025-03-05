@@ -45,7 +45,7 @@ const TicketsTab = () => {
 
             try {
                 await Calendar.createEventAsync(defaultCalendar.id, eventDetails);
-                Alert.alert('Event Created', 'The event has been added to your calendar.');
+                Alert.alert('¡Todo listo!', 'Se ha añadido un evento a tu calendario');
             } catch (error) {
                 console.error('Error creating calendar event:', error);
                 Alert.alert('Error', 'There was an error creating the calendar event.');
