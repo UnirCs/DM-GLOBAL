@@ -2,7 +2,6 @@ import React, { useEffect, useState, useContext } from 'react';
 import {Text, View, TouchableOpacity, ScrollView, Alert} from 'react-native';
 import {router, useLocalSearchParams, useNavigation} from 'expo-router';
 import useMovies from "../../../../../../../../../../hooks/useMovies";
-import CinemaSelectionButton from "../../../../../../../../../../components/CinemaSelectionButton";
 import { PurchaseContext } from '../../../../../../../../../../context/PurchaseContext';
 import {CommonActions} from "@react-navigation/native";
 import CinemaCommonButton from "../../../../../../../../../../components/CinemaCommonButton";
@@ -76,7 +75,7 @@ const SeatSelection = () => {
     };
 
     return loading ? <Text className="text-center">Cargando...</Text> : (
-        <ScrollView className="flex-1 px-5 mt-5">
+        <ScrollView className="flex-1 px-2 mt-5">
             {movie ? (
                 <>
                     <View className="p-4">
@@ -86,7 +85,7 @@ const SeatSelection = () => {
                             <Text className="text-lg">Hora: {movie.sessions[idSession - 1].hour}</Text>
                         </View>
                         <View className="mb-4">
-                            <Text className="text-center mb-2">Pantalla</Text>
+                            <Text className="text-center mb-5 py-7 bg-gray-800 text-white p-2 rounded">Pantalla</Text>
                             <View className="flex flex-wrap justify-center">
                                 {seats.map((row, i) => (
                                     <View key={i} className="flex flex-row">

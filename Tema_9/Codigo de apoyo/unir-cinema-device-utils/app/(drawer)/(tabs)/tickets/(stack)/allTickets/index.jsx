@@ -40,18 +40,18 @@ const TicketsTab = () => {
                 endDate,
                 timeZone: 'GMT',
                 location: purchase.cinema,
-                notes: `Asientos: ${purchase.seats?.map(seat => `Row ${seat.row} - Seat ${seat.col}`).join(', ')}`
+                notes: `Asientos: ${purchase.seats?.map(seat => `Fila ${seat.row} - Asiento ${seat.col}`).join(', ')}`
             };
 
             try {
                 await Calendar.createEventAsync(defaultCalendar.id, eventDetails);
                 Alert.alert('¡Todo listo!', 'Se ha añadido un evento a tu calendario');
             } catch (error) {
-                console.error('Error creating calendar event:', error);
-                Alert.alert('Error', 'There was an error creating the calendar event.');
+                console.error('Error creando evento en calendario:', error);
+                Alert.alert('¡Ups!', 'Ha ocurrido un error intentando añadir un evento a tu calendario');
             }
         } else {
-            Alert.alert('Permission Denied', 'Calendar permission is required to create an event.');
+            Alert.alert('Permisos insuficientes', 'Debes dar permisos a la aplicación para poder añadir eventos al calendario');
         }
     };
 

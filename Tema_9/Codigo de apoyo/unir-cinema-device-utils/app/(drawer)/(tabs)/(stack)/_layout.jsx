@@ -19,7 +19,7 @@ const StackLayout = () => {
             screenOptions={{
                 headerShown: true,
                 headerShadowVisible: true,
-                contentStyle:{backgroundColor: "white"},//Prueba a cambiar el color de fondo, veras que pasa
+                contentStyle:{backgroundColor: "white"}, //Prueba a cambiar el color de fondo, veras que pasa
 
                 headerStyle: {backgroundColor: "#0096c3",},
                 headerTintColor: "white",
@@ -28,7 +28,7 @@ const StackLayout = () => {
                     <Pressable onPress={() => onHeaderLeftPress(canGoBack)}>
                         <Ionicons
                             name={canGoBack ? "chevron-back-outline" : "menu-outline"}
-                            color={"#0096c3"}
+                            color={"white"}
                             className="mr-5"
                             size={20}/>
                     </Pressable>),
@@ -36,7 +36,6 @@ const StackLayout = () => {
         >
             <Stack.Screen name="home/index" options={{
                 title: "Inicio",
-                headerBackTitle: "",
             }}>
             </Stack.Screen>
             <Stack.Screen name="landing/[id]/index" options={({route}) => ({

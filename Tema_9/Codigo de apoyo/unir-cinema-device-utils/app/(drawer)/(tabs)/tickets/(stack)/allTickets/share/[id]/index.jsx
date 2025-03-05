@@ -23,7 +23,7 @@ const ShareTicketsScreen = () => {
                 });
 
                 if (data.length > 0) {
-                    //Filter contacts that have phone numbers
+                    // Filtramos los contactos que no tengan número de teléfono
                     const validContacts = data.filter(contact => contact.phoneNumbers && contact.phoneNumbers.length > 0);
                     setContacts(validContacts);
                     setFilteredContacts(validContacts);
@@ -49,13 +49,13 @@ const ShareTicketsScreen = () => {
                     [contact.phoneNumbers[0].number],
                     `¡Recuerda que nos vemos a las ${purchase.hour} para ver ${purchase.movie}!`,
                 );
-                console.log("SMS sent");
+                console.log("SMS enviado");
             } else {
-                console.log('SMS is not available on this device');
-                alert('SMS is not available on this device');
+                console.log('No es posible enviar SMS desde este dispositivo');
+                alert('No es posible enviar SMS desde este dispositivo');
             }
         } else {
-            console.log("No phone number");
+            console.log("No hay numero de telefono");
         }
     };
 
