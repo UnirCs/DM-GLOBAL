@@ -1,0 +1,96 @@
+// Partes de una URL
+protocolo://dominio:puerto/ruta?query
+
+// Ejemplos de operaciones GET
+
+Obtener todas las peliculas
+    GET http://localhost:3000/peliculas
+    Dominio: localhost
+    Puerto: 3000
+    Ruta: /peliculas
+
+Obtener una pelicula por su id (path parameter)
+    GET http://localhost:3000/peliculas/1
+    Dominio: localhost
+    Puerto: 3000
+    Ruta: /peliculas/1
+
+Obtener una pelicula por su categoria (query parameter)
+    GET http://localhost:3000/peliculas?categoria=accion
+    Dominio: localhost
+    Puerto: 3000
+    Ruta: /peliculas
+    Query: categoria=accion
+
+Usar varios query parameters
+    GET http://localhost:3000/peliculas?categoria=accion&anio=2020
+    Dominio: localhost
+    Puerto: 3000
+    Ruta: /peliculas
+    Query: categoria=accion&anio=2020
+
+// Ejemplos de operaciones POST
+
+Crear una pelicula
+    POST http://localhost:3000/peliculas
+    {
+        "titulo": "El padrino",
+        "anio": 1972,
+        "categoria": "drama"
+    }
+
+// Ejemplos de operaciones PUT
+
+Actualizar una pelicula por su id (path parameter)
+Raramente se usa otra forma de seleccion de recurso
+    PUT http://localhost:3000/peliculas/1
+    {
+        "titulo": "El padrino",
+        "anio": 1975,
+        "categoria": "ciencia_ficcion"
+    }
+
+// Ejemplos de operaciones PATCH
+
+Actualizar una pelicula por su id (path parameter)
+    PATCH http://localhost:3000/peliculas/1
+    {
+        "anio": 1976
+    }
+
+// Ejemplos de operaciones DELETE
+
+Eliminar una pelicula por su id (path parameter)
+    DELETE http://localhost:3000/peliculas/1
+
+
+// Composicion de recursos
+Un recursos puede tener otros recursos anidados
+Por ejemplo una pelicula puede tener actores y cada actor puede tener una serie de representantes
+Independientemente de como se almacene en una base de datos la informacion, es responsabilidad de la API
+mostrar la informacion de forma que sea facil de entender y manipular
+
+Obtener todos los actores de una pelicula
+    GET http://localhost:3000/peliculas/1/actores
+    Dominio: localhost
+    Puerto: 3000
+    Ruta: /peliculas/1/actores
+
+Obtener todos los actores de una pelicula que sean ingleses
+    GET http://localhost:3000/peliculas/1/actores?nacionalidad=ingles
+    Dominio: localhost
+    Puerto: 3000
+    Ruta: /peliculas/1/actores
+    Query: nacionalidad=ingles
+
+Obtener todos los representantes de un actor
+    GET http://localhost:3000/peliculas/1/actores/1/representantes
+    Dominio: localhost
+    Puerto: 3000
+    Ruta: /peliculas/1/actores/1/representantes
+
+Obtener el segundo representante de un actor
+    GET http://localhost:3000/peliculas/1/actores/1/representantes/2
+    Dominio: localhost
+    Puerto: 3000
+    Ruta: /peliculas/1/actores/1/representantes/2
