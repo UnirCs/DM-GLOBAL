@@ -8,7 +8,7 @@ Tomaremos como ejemplo la vista principal de una aplicacion web de una cafeterí
 
 ## Requisitos
 
-- **Proyecto React:** Utiliza [Create React App](https://create-react-app.dev/) o Vite para inicializar tu proyecto.
+- **Proyecto React:** Utiliza [Vite](https://vite.dev/guide/) para inicializar tu proyecto.
 - **Componentes Funcionales:** Toda la aplicación debe construirse usando componentes funcionales. **No** se deben utilizar hooks ni navegación.
 - **Descomposición de la Vista:** La vista principal debe estar descompuesta en, al menos, 7 componentes. Se sugiere la siguiente estructura (pero puedes modificarla o agregar componentes según lo desees):
     - **Header:** Contendrá el logo y un menú de navegación (visual, sin funcionalidad real).
@@ -23,10 +23,9 @@ Tomaremos como ejemplo la vista principal de una aplicacion web de una cafeterí
 
 ## Instrucciones
 
-1. **Crear el Proyecto:** Inicia un nuevo proyecto React con Create React App o con Vite.
+1. **Crear el Proyecto:** Inicia un nuevo proyecto React con Vite.
    ```bash
-   npx create-react-app my-coffee-shop
-   cd my-coffee-shop
+   npm create vite@latest
     ```
    
 2. Estructurar el Proyecto: Organiza tu código creando una carpeta components dentro de src y coloca cada componente en un archivo separado.
