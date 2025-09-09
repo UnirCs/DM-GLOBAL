@@ -37,3 +37,19 @@ const imparCallBack = () => console.log("El numero es impar");
 
 isPar(6, parCallBack, imparCallBack);
 isPar(7, parCallBack, imparCallBack);
+
+/**
+ * Funciones de orden superior
+ *
+ * Son funciones que reciben como argumento otras funciones o devuelven funciones
+ * Un ejemplo es el método filter de los arrays
+ * Este método recibe una función como argumento que se aplica a cada elemento del array
+ * Si la función devuelve true, el elemento se incluye en el nuevo array
+ * Si devuelve false, no se incluye
+ */
+let numeros = [1,2,3,4,5,6,7,8,9,10];
+let numerosPares = numeros.filter(n => n%2 === 0);
+const esImpar = n => n%2 !== 0;
+let numerosImpares = numeros.filter(esImpar);
+console.log(numerosPares);
+console.log(numerosImpares);
