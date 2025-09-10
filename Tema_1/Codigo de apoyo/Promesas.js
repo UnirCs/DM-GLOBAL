@@ -27,9 +27,15 @@ new Promise((resolve, reject) => {
  * Esperar la carga de varios recursos (imágenes, datos, configuraciones) antes de renderizar una vista completa.
  */
 // Simulación de tres operaciones asíncronas (por ejemplo, llamadas a APIs)
+
 const obtenerUsuarios = new Promise(resolve => {
     setTimeout(() => resolve(['Usuario1', 'Usuario2']), 1000);
 });
+
+const obtenerUsuarios2 = new Promise((resolve, reject) => {
+    setTimeout(() => resolve(['Usuario1', 'Usuario2']), 1000);
+});
+
 const obtenerPosts = new Promise(resolve => {
     setTimeout(() => resolve(['Post1', 'Post2']), 1500);
 });
