@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store - Librería Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Book Store</h1>
+            <p>Made with ❤️ by <a href="https://www.linkedin.com/in/jesusperezmelero/">Jesús</a></p>
+        </header>
+
+        <main>
+            <div class="filters">
+                <h2>Filtrar por categoría</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-category="">Todos</button>
+                    <button class="filter-btn" data-category="ficcion">Ficción</button>
+                    <button class="filter-btn" data-category="aventura">Aventura</button>
+                    <button class="filter-btn" data-category="drama">Drama</button>
+                    <button class="filter-btn" data-category="romance">Romance</button>
+                </div>
+            </div>
+
+            <div class="loading" id="loading">
+                <p>Cargando libros...</p>
+            </div>
+
+            <div class="books-grid" id="booksGrid">
+                <!-- Los libros se cargarán aquí dinámicamente -->
+            </div>
+
+            <div class="error" id="error" style="display: none;">
+                <p>Error al cargar los libros. Por favor, inténtalo de nuevo.</p>
+                <button onclick="loadBooks()">Reintentar</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

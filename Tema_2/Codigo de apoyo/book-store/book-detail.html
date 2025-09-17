@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Libro - Book Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Book Store</h1>
+            <a href="index.html" class="back-link">← Volver a la biblioteca</a>
+        </header>
+
+        <main>
+            <div class="loading" id="loading">
+                <p>Cargando detalles del libro...</p>
+            </div>
+
+            <div class="book-detail" id="bookDetail" style="display: none;">
+                <!-- Los detalles del libro se cargarán aquí -->
+            </div>
+
+            <div class="reviews-section" id="reviewsSection" style="display: none;">
+                <h2>Reseñas</h2>
+
+                <div class="add-review">
+                    <h3>Añadir una reseña</h3>
+                    <form id="reviewForm">
+                        <div class="form-group">
+                            <label for="rating">Puntuación (1-5):</label>
+                            <select id="rating" required>
+                                <option value="">Selecciona una puntuación</option>
+                                <option value="1">⭐ 1 estrella</option>
+                                <option value="2">⭐⭐ 2 estrellas</option>
+                                <option value="3">⭐⭐⭐ 3 estrellas</option>
+                                <option value="4">⭐⭐⭐⭐ 4 estrellas</option>
+                                <option value="5">⭐⭐⭐⭐⭐ 5 estrellas</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="comment">Comentario:</label>
+                            <textarea id="comment" rows="4" placeholder="Escribe tu reseña aquí..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Enviar Reseña</button>
+                    </form>
+                </div>
+
+                <div class="reviews-list" id="reviewsList">
+                    <!-- Las reseñas se cargarán aquí -->
+                </div>
+            </div>
+
+            <div class="error" id="error" style="display: none;">
+                <p>Error al cargar la información. Por favor, inténtalo de nuevo.</p>
+                <button onclick="loadBookDetail()">Reintentar</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="book-detail.js"></script>
+</body>
+</html>
