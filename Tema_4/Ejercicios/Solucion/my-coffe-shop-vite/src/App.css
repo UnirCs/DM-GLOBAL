@@ -1,0 +1,358 @@
+/* Estilos optimizados para Vite - Coffee Shop */
+
+/* Reset específico para evitar conflictos con Vite */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f6f0;
+  color: #333;
+  line-height: 1.6;
+}
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #6f4e37 0%, #8b5a3c 100%);
+  color: white;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(111, 78, 55, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  cursor: pointer;
+  padding: 0.8rem 1.2rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+}
+
+.nav-list li:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 6rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(111, 78, 55, 0.3), rgba(139, 90, 60, 0.3));
+  z-index: 1;
+}
+
+.hero h2, .hero p {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin: 0;
+  opacity: 0.95;
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Secciones principales */
+.menu, .specials, .about, .testimonials {
+  padding: 4rem 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  border-bottom: 1px solid #e8e4d9;
+}
+
+.menu h2, .specials h2, .about h2, .testimonials h2 {
+  text-align: center;
+  color: #6f4e37;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.menu h2::after, .specials h2::after, .about h2::after, .testimonials h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #6f4e37, #8b5a3c);
+  border-radius: 2px;
+}
+
+/* Menu específico */
+.menu {
+  background: linear-gradient(135deg, #fff 0%, #f9f7f1 100%);
+  border-radius: 20px;
+  margin: 2rem auto;
+  box-shadow: 0 10px 30px rgba(111, 78, 55, 0.1);
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.menu li {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #6f4e37;
+  box-shadow: 0 8px 25px rgba(111, 78, 55, 0.15);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu li::before {
+  content: '☕';
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 4rem;
+  opacity: 0.1;
+  transform: rotate(15deg);
+}
+
+.menu li:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(111, 78, 55, 0.25);
+  background: linear-gradient(135deg, #fff 0%, #f8f6f0 100%);
+}
+
+/* Specials */
+.specials {
+  background: linear-gradient(135deg, #6f4e37 0%, #8b5a3c 100%);
+  color: white;
+  text-align: center;
+  border-radius: 20px;
+  margin: 2rem auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.specials::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.specials h2 {
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.specials h2::after {
+  background: white;
+}
+
+.specials p {
+  font-size: 1.2rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* About */
+.about {
+  text-align: center;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #555;
+}
+
+/* Testimonials */
+.testimonials {
+  background: linear-gradient(135deg, #f9f7f1 0%, #fff 100%);
+  text-align: center;
+  border-radius: 20px;
+  margin: 2rem auto;
+}
+
+.testimonials blockquote {
+  font-size: 1.3rem;
+  font-style: italic;
+  margin: 2rem 0;
+  color: #6f4e37;
+  position: relative;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testimonials blockquote::before,
+.testimonials blockquote::after {
+  content: '"';
+  font-size: 3rem;
+  color: #8b5a3c;
+  position: absolute;
+  opacity: 0.3;
+}
+
+.testimonials blockquote::before {
+  top: -20px;
+  left: -40px;
+}
+
+.testimonials blockquote::after {
+  bottom: -40px;
+  right: -40px;
+}
+
+.testimonials cite {
+  font-weight: 600;
+  color: #8b5a3c;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(135deg, #333 0%, #555 100%);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.footer p {
+  margin: 0.5rem 0;
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.8rem;
+  }
+
+  .nav-list {
+    gap: 1rem;
+  }
+
+  .hero {
+    padding: 4rem 1rem;
+  }
+
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+
+  .menu, .specials, .about, .testimonials {
+    padding: 2rem 1rem;
+  }
+
+  .menu h2, .specials h2, .about h2, .testimonials h2 {
+    font-size: 2rem;
+  }
+
+  .menu ul {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
