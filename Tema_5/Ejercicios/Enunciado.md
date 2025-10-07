@@ -1,6 +1,6 @@
 # Ejercicio 1: Añadir un Nuevo Cine y Modo Oscuro
 
-En este ejercicio deberás ampliar el proyecto **Unir-cinema-custom-hook** del código de apoyo para:
+En este ejercicio deberás ampliar el proyecto **Unir-cinema-vite-custom-hook** del código de apoyo para:
 
 1. **Añadir un nuevo cine**
     - Incorporar una nueva ciudad (por ejemplo, "Sevilla") en la aplicación.
@@ -26,7 +26,7 @@ En este ejercicio deberás ampliar el proyecto **Unir-cinema-custom-hook** del c
 
 2. **Implementar el Modo Oscuro**
     - **Estado Global para el Tema:**  
-      En `src/App.js` añade un nuevo estado (por ejemplo, `darkMode`) que controle si la aplicación se muestra en modo oscuro o no.
+      En `src/App.js` añade un nuevo estado (por ejemplo, `darkMode`) que controle si la aplicación se muestra en modo oscuro o no. ¿Tendría sentido usar un contexto global para esto? Considera crear un `ThemeContext` o algo así si es necesario.
     - **Propagar el Estado:**  
       Pasa el valor de `darkMode` y la función para alternarlo a los componentes que necesiten cambiar su apariencia (Header, Landing, Footer, etc.).
     - **Cambios en CSS:**  
@@ -45,7 +45,7 @@ En este ejercicio deberás ampliar el proyecto **Unir-cinema-custom-hook** del c
 # Ejercicio 2: Sesiones con Idioma y Filtrado por Preferencia
 
 
-En este ejercicio se ampliará el proyecto **Unir-cinema-custom-hook-context** (que contiene la resolución del ejercicio anterior) para que:
+En este ejercicio se ampliará el proyecto **Unir-cinema-vite-custom-hook-context** (que contiene la resolución del ejercicio anterior) para que:
 1. **Las sesiones de cada película** incluyan la información del idioma de proyección. Cada sesión se representará ahora mediante un objeto que contendrá:
    - `hour`: la hora de inicio.
    - `language`: el idioma de proyección, que puede ser `"castellano"` o `"vose"`.
