@@ -7,7 +7,7 @@ import { moviesDataValencia } from '../data/moviesDataValencia';
 
 // Custom hook que utiliza el contexto global y maneja las películas
 export const useMovies = () => {
-  const { city, darkMode, toggleDarkMode, changeCity } = useContext(GlobalContext);
+  const { city, changeCity } = useContext(GlobalContext);
 
   const citiesData = {
     barcelona: {
@@ -51,12 +51,8 @@ export const useMovies = () => {
   return {
     // Estado del contexto
     city,
-    darkMode,
-
     // Funciones del contexto
     changeCity,
-    toggleDarkMode,
-
     // Datos de películas
     movies: getCurrentMovies(),
     getCurrentCityName,
