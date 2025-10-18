@@ -50,6 +50,11 @@ const SeatSelection = () => {
     return 'seat available';
   };
 
+  const handleSeatConfirmation = () => {
+    alert(`Has reservado los asientos: ${selectedSeats.join(', ')} para la película "${movie.title}" a las ${time}.`);
+    navigate('/');
+  }
+
   if (!movie) {
     return (
       <div className={`home-page ${darkMode ? 'dark' : ''}`}>
@@ -112,7 +117,7 @@ const SeatSelection = () => {
           <div style={{ textAlign: 'center', margin: '2rem 0' }}>
             <h3>Asientos seleccionados: {selectedSeats.join(', ')}</h3>
             <p>Total: {selectedSeats.length} asiento(s) × 12€ = {selectedSeats.length * 12}€</p>
-            <button className="nav-button" style={{ fontSize: '1.2rem', padding: '1rem 2rem' }}>
+            <button className="nav-button" style={{ fontSize: '1.2rem', padding: '1rem 2rem' }} onClick={handleSeatConfirmation}>
               Confirmar Reserva
             </button>
           </div>
