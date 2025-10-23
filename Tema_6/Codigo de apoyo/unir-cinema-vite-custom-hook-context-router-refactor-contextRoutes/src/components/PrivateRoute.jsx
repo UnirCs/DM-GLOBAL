@@ -10,7 +10,6 @@ const PrivateRoute = ({ children }) => {
         // Se redirige a /login y se pasa la ruta actual en el estado ("from")
         return <Navigate to="/login" state={{ from: location.pathname }} replace />;
     }
-
     return children;
 };
 
