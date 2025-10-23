@@ -1,13 +1,15 @@
 import React from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { useMovies } from '../hooks/useMovies';
 
 const MovieDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const { getMovieById, darkMode } = useMovies();
 
   const movie = getMovieById(id);
+  const selectedDate = searchParams.get('date');
 
   if (!movie) {
     return (
@@ -65,6 +67,12 @@ const MovieDetails = () => {
           <h3>Sinopsis:</h3>
           <p>{movie.synopsis}</p>
         </div>
+
+        {selectedDate && (
+          <div style={{ margin: '2rem 0', padding: '1rem', backgroundColor: darkMode ? '#2a2a2a' : '#f0f0f0', borderRadius: '8px' }}>
+            <p><strong>Fecha seleccionada:</strong> {selectedDate}</p>
+          </div>
+        )}
 
         <div className="sessions">
           <h3>Seleccionar horario:</h3>
