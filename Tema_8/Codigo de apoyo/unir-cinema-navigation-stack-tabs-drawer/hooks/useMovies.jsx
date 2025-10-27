@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
 import { movies as moviesMadrid } from '../data/moviesDataMadrid';
 import { movies as moviesBarcelona } from '../data/moviesDataBarcelona';
 import { movies as moviesValencia } from '../data/moviesDataValencia';
@@ -15,7 +14,8 @@ const useMovies = (city) => {
             try {
                 // Simulación de retardo
                 await new Promise(resolve => setTimeout(resolve, 100));
-                const response = await axios.get(`https://unir-cinema.net/movies?cinema=${city}`);
+                throw new Error('Simulated fetch error');
+                //const response = await axios.get(`https://unir-cinema.net/movies?cinema=${city}`);
                 setMovies(response.data);
             } catch (error) {
                 let fallbackMovies = [];

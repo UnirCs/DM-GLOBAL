@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
-import { Text, View, ScrollView, SafeAreaView, Pressable, Modal, TouchableOpacity, Alert } from 'react-native';
+import { Text, View, ScrollView, Pressable, Modal, TouchableOpacity, Alert } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { PurchaseContext } from '../../../../../../context/PurchaseContext';
 import { router } from 'expo-router';
