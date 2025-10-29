@@ -60,7 +60,7 @@ El objetivo de este ejercicio es configurar un nuevo proyecto de React Native co
        ```
      - En el archivo `App.js`, utiliza la fuente en un componente de texto:
        ```javascript
-       <Text className="font-work-light"> ¡Hola, Mundo! </Text>
+       <Text className="font-rasa-light"> ¡Hola, Mundo! </Text>
        ```
 
 6. **Verificar**: Verifica que los estilos de Nativewind se han aplicado correctamente y que la fuente descargada se muestra en el simulador. ¡Y juega todo lo que quieras 🤗🤗!
