@@ -1,9 +1,10 @@
 import {StatusBar} from 'expo-status-bar';
-import {SafeAreaView, Text, View} from 'react-native';
+import {Text, View} from 'react-native';
 import "./global.css";
 import {useFonts} from "expo-font";
 import CinemaButton from "./components/CinemaButton";
 import * as Haptics from "expo-haptics";
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function App() {
 
@@ -15,9 +16,8 @@ export default function App() {
 
     return (
         <SafeAreaView>
-            <StatusBar style="light"/>
             <View className="px-10 mt-5 bg-white-500 text-white">
-
+                <StatusBar style="dark"/>
                 <Text className="text-center font-rasa-light text-4xl mb-10">UNIR Cinema</Text>
                 <Text className="text-center font-rasa-light text-2xl mb-10">¿A qué cine deseas ir?</Text>
 
