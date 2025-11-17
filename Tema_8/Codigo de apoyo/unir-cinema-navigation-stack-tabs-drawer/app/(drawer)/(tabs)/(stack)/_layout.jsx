@@ -1,11 +1,30 @@
+import React from "react";
 import {router, Stack, useNavigation} from "expo-router";
 import {DrawerActions} from "@react-navigation/native";
 import {Ionicons} from "@expo/vector-icons";
-import {Pressable, StyleSheet, TouchableOpacity} from "react-native";
+import {Pressable, StyleSheet} from "react-native";
+import {useFocusEffect} from "@react-navigation/native";
 
 const StackLayout = () => {
-
     const navigation = useNavigation();
+
+    // Función para controlar el drawer basado en la ruta actual
+    useFocusEffect(
+        React.useCallback(() => {
+            const state = navigation.getState();
+            const currentRouteName = state?.routes[state.index]?.name;
+            const isHomePage = currentRouteName === 'home/index';
+
+            // Obtener la navegación del drawer (parent del parent del stack)
+            const drawerNavigation = navigation.getParent().getParent();
+            if (drawerNavigation) {
+                drawerNavigation.setOptions({
+                    swipeEnabled: isHomePage
+                });
+            }
+        }, [navigation])
+    );
+
     const onHeaderLeftPress = (canGoBack) => {
         if(canGoBack) {
             router.back();
