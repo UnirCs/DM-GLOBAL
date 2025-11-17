@@ -1,6 +1,7 @@
 import {router, Stack, useNavigation} from "expo-router";
-import {DrawerActions, StackActions} from "@react-navigation/native";
+import {DrawerActions} from "@react-navigation/native";
 import {Ionicons} from "@expo/vector-icons";
+import {Pressable, StyleSheet, TouchableOpacity} from "react-native";
 
 const StackLayout = () => {
 
@@ -18,6 +19,7 @@ const StackLayout = () => {
             screenOptions={{
                 headerShown: true,
                 headerShadowVisible: false,
+                headerBackVisible: true, // Desactiva el botón de back nativo
 
                 headerStyle: {
                     backgroundColor: "#0096c3",
@@ -26,11 +28,18 @@ const StackLayout = () => {
                 headerTitleStyle: {
                     fontWeight: "bold",
                 },
-                headerLeft: ({ canGoBack }) => <Ionicons
-                    name={ canGoBack ? "arrow-back-outline" : "menu-outline"}
-                    className="mr-5"
-                    size={20}
-                    onPress={() => onHeaderLeftPress(canGoBack)} />,
+                headerLeft: ({ canGoBack }) =>
+                    canGoBack ? null :
+                    <Pressable
+                        style={styles.headerButton}
+                        onPress={() => onHeaderLeftPress(canGoBack)}
+                    >
+                        <Ionicons
+                            name={"menu-outline"}
+                            size={24}
+                            color="#fff"
+                        />
+                    </Pressable>
             }}
         >
             <Stack.Screen name="home/index" options={{
@@ -55,5 +64,15 @@ const StackLayout = () => {
         </Stack>
     )
 }
+
+const styles = StyleSheet.create({
+    headerButton: {
+        width: 40,
+        height: 40,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginLeft: 0,
+    }
+});
 
 export default StackLayout;

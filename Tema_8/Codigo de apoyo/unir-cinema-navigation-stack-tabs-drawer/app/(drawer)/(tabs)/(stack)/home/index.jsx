@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View, Image} from "react-native";
+import {Text, View, Image, StatusBar} from "react-native";
 import {router} from 'expo-router';
 import CinemaButton from "../../../../../components/CinemaButton";
 
@@ -38,6 +38,7 @@ const HomeScreen = () => {
                     }}
                 />
             </View>
+            <StatusBar barStyle="default"></StatusBar>
         </View>
     )
 };
