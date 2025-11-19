@@ -50,8 +50,21 @@ const SeatSelection = () => {
             seats: getSelectedSeats()
         };
         addPurchase(purchase);
-        Alert.alert('Compra realizada', 'Compra realizada con éxito');
-        router.replace(`/home`);
+        // Mostrar alerta de confirmación
+        Alert.alert(
+            '¡Entradas compradas correctamente!',
+            `Has comprado ${getSelectedSeats().length} entrada(s) para ${movie.name}`,
+            [
+                {
+                    text: 'OK',
+                    onPress: () => {
+                        // Limpiar el stack de navegación y volver a landing
+                        router.dismissAll();
+                        router.replace('/home');
+                    }
+                }
+            ]
+        );
     };
 
     return loading ? <Text className="text-center">Cargando...</Text> : (
